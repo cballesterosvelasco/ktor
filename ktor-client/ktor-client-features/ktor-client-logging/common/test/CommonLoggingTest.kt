@@ -73,7 +73,7 @@ REQUEST http://localhost/ failed with exception: io.ktor.client.features.logging
             var failed = false
             try {
                 client.get<String>()
-            } catch (_: IllegalStateException) {
+            } catch (_: CustomError) {
                 failed = true
             }
 

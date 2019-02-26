@@ -36,7 +36,7 @@ compileTestKotlinJs {
     kotlinOptions.sourceMapEmbedSources = 'always'
 }
 
-task assembleWeb(type: Sync, group: 'build', dependsOn: compileTestKotlinJs) {
+task assembleWeb(type: Copy, group: 'build', dependsOn: compileTestKotlinJs) {
     from compileKotlinJs.destinationDir
     into "$project.buildDir/node_modules"
 
