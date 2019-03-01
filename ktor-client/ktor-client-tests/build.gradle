@@ -49,7 +49,7 @@ kotlin.sourceSets {
         api project(':ktor-client:ktor-client-js')
     }
     if (!project.ext.ideaActive) {
-        configure([linuxX64Test, macosX64Test]) {
+        configure([linuxX64Test, mingwX64Test, macosX64Test]) {
             dependencies {
                 api project(':ktor-client:ktor-client-curl')
             }
